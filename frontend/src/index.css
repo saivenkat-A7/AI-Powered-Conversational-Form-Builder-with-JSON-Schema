@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom scrollbar */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Premium RJSF Styling */
+.custom-rjsf {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Form Helper Headers (e.g. "Errors") */
+.custom-rjsf .error-detail {
+  @apply bg-red-50 border border-red-100 rounded-xl p-4 mb-6;
+}
+
+.custom-rjsf .error-detail .errors-list {
+  @apply list-none p-0 m-0;
+}
+
+.custom-rjsf .error-detail .errors-list li {
+  @apply text-red-600 text-sm font-medium flex items-center gap-2;
+}
+
+.custom-rjsf .error-detail .errors-list li::before {
+  content: '⚠️';
+  @apply text-xs;
+}
+
+/* Form Labels */
+.custom-rjsf .control-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #312e81; /* Indigo-900 */
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.custom-rjsf .form-group {
+  margin-bottom: 0px;
+}
+
+/* Input Fields */
+.custom-rjsf input[type="text"],
+.custom-rjsf input[type="email"],
+.custom-rjsf input[type="number"],
+.custom-rjsf input[type="password"],
+.custom-rjsf select,
+.custom-rjsf textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: 1.25rem;
+  border: 2px solid #eef2ff;
+  background: #ffffff;
+  font-size: 1rem;
+  color: #1e1b4b;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.05); /* Soft indigo shadow */
+}
+
+.custom-rjsf input[type="text"]:hover,
+.custom-rjsf textarea:hover,
+.custom-rjsf select:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.1);
+}
+
+.custom-rjsf input[type="text"]:focus,
+.custom-rjsf textarea:focus,
+.custom-rjsf select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 5px rgba(99, 102, 241, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Valid/Error States */
+.custom-rjsf .has-error input {
+  @apply border-red-300 bg-red-50/20 text-red-900 focus:border-red-500 focus:ring-red-100;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.08);
+}
+
+.custom-rjsf .error-config {
+  @apply text-red-600 text-xs mt-2 font-bold flex items-center gap-1.5;
+}
+
+/* Descriptions */
+.custom-rjsf p.field-description {
+  font-size: 0.8125rem;
+  color: #4f46e5; /* More vibrant Indigo */
+  margin-top: 0.625rem;
+  font-weight: 600;
+  opacity: 1;
+}
+
+/* Checkboxes and Buttons */
+.custom-rjsf .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  background: #f8faff;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  border: 1px solid #f0f4ff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.custom-rjsf .checkbox:hover {
+  background: #ffffff;
+  border-color: #e0e7ff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.custom-rjsf input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  @apply rounded-lg border-gray-300 text-indigo-600 focus:ring-indigo-500;
+}
+
+/* Submit Button styling */
+.custom-rjsf button[type="submit"] {
+  @apply w-full mt-6 py-4 px-6 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-700 text-white font-bold text-lg shadow-xl shadow-indigo-200/50 hover:shadow-indigo-300/60 hover:-translate-y-1 active:scale-[0.98] transition-all flex items-center justify-center gap-3 cursor-pointer;
+}
+
+.custom-rjsf button[type="submit"]::after {
+  content: '→';
+  @apply text-xl font-light opacity-80;
+}
+
+
+/* Fieldsets and Legends */
+.custom-rjsf fieldset {
+  border: 2px solid #f8faff;
+  border-radius: 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.4);
+  margin-top: 2rem;
+  position: relative;
+}
+
+.custom-rjsf legend {
+  font-size: 1.125rem;
+  font-weight: 900;
+  color: #312e81;
+  padding: 0.5rem 1.25rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.1);
+  position: absolute;
+  top: -1.25rem;
+  left: 1.5rem;
+}
