@@ -2,7 +2,7 @@
 
 An AI-powered conversational form builder that generates complex JSON Schema forms through interactions with a Large Language Model (Google Gemini).
 
-## 🏗️ Architecture
+##  Architecture
 
 The application follows a modern decoupled architecture, combining AI intelligence with strict schema validation.
 
@@ -18,7 +18,7 @@ The application follows a modern decoupled architecture, combining AI intelligen
   - **Retry Mechanism**: Automatically retries LLM requests upon validation failure (up to 2 retries).
 - **In-Memory Store**: A simple yet effective storage system for managing multiple concurrent user sessions.
 
-## ✨ Key Features
+##  Key Features
 
 - **Conversational Form Building**: Create and update complex forms just by talking to the AI.
 - **Ambiguity Detection**: The AI detects vague requests and asks clarifying questions instead of guessing.
@@ -27,7 +27,7 @@ The application follows a modern decoupled architecture, combining AI intelligen
 - **Conditional Logic**: Built-in support for visibility rules via custom `x-show-when` tags.
 - **Dockerized Environment**: One-command setup for development and testing.
 
-## 🧠 Challenges & Solutions
+##  Challenges & Solutions
 
 | Challenge | Solution |
 | :--- | :--- |
@@ -35,7 +35,7 @@ The application follows a modern decoupled architecture, combining AI intelligen
 | **Ambiguity Management** | Developed a "Clarification" response structure. When a prompt is too vague, the backend forces the LLM to output a list of questions rather than a malformed schema. |
 | **Schema Consistency** | Used custom RJSF extensions to handle non-standard schema properties like visibility logic without breaking the core parser. |
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 - [ ] **Persistent Storage**: Move from in-memory maps to a robust database like PostgreSQL or MongoDB.
 - [ ] **Code Export**: Allow users to download the generated React components or raw JSON files.
@@ -43,13 +43,13 @@ The application follows a modern decoupled architecture, combining AI intelligen
 - [ ] **Interactive Onboarding**: A guided tour for first-time users to explore the builder's capabilities.
 - [ ] **Custom Themes**: Allow the AI to suggest and apply CSS themes to the generated forms.
 
-## 🛠️ Prerequisites
+##  Prerequisites
 
 - Docker and Docker Compose
 - Node.js (if running locally without Docker)
 - A Google Gemini API Key
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
 1. Clone this repository.
 2. In the `backend` directory, there is a `.env.example` file. Copy this file into a newly created `.env` file OR fill your `LLM_API_KEY` directly inside `backend/.env`.
@@ -57,7 +57,7 @@ The application follows a modern decoupled architecture, combining AI intelligen
 LLM_API_KEY="your_free_gemini_api_key_here"
 ```
 
-## 🏃 Running the Application
+##  Running the Application
 
 To run the entire stack with Docker:
 ```bash
@@ -69,7 +69,7 @@ This will start:
 
 Access the React application in your browser at `http://localhost:3000`.
 
-## 🧪 Testing
+##  Testing
 
 You can test the application manually using the Chat interface, or automatically using HTTP clients like `curl`.
 
