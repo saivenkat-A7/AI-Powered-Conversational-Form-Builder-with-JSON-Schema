@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080'
+    baseURL: import.meta.env.VITE_API_BASE_URL,  // This will use the environment variable
 });
 
 export const generateForm = async (prompt, conversationId = null, mockFailures = 0) => {
